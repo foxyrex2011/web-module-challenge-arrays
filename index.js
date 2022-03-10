@@ -66,7 +66,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(originalFlavors){
   if (originalFlavors.length === 31) {
-  return true; } else {
+    return true; 
+  } else {
     return false;
   }
  } 
@@ -174,8 +175,14 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, flavor){
+  let filteredArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(flavor)) {
+      filteredArray.push(array[i]);
+    }
+  }
+    return filteredArray
 }
 
 
